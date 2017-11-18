@@ -8,11 +8,11 @@ class MoimList extends Component {
     this.props.fetchMoim();
   }
 
-  renderMoim = () => {
+  renderMoim () {
     return this.props.moimList.map((moim) => {
       return <li key={moim.id}><Moim moimData={moim}/></li>;
     });
-  };
+  }
 
   render () {
     return (
@@ -21,6 +21,7 @@ class MoimList extends Component {
         <ul>
           {this.renderMoim()}
         </ul>
+
       </div>
     );
   }
