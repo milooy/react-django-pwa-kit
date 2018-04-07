@@ -549,7 +549,7 @@ urlpatterns = [
         name='index'),
     url(r'^api/', include('api.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')) # login, logout 등 사용,
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')), # login, logout 등 사용
     url(r'^(home)|(moim)/', TemplateView.as_view(template_name='index.html'), name='route')
 ]
 ```
